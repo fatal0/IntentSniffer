@@ -147,9 +147,9 @@ public class IntentSniffer implements IXposedHookLoadPackage{
             { 
                 Log.i(tag, methodName + " Extra[" + n +"]");
                 String key = keys[n].toString();
-                Log.i(tag, methodName + " Type: " + b.get(key).getClass().getName()); 
+                Log.i(tag, methodName + " Type: " + (b.get(key) == null ? "null" : b.get(key).getClass().getName())); 
                 Log.i(tag, methodName + " Key: " + key);
-                Log.i(tag, methodName + " Value: " + String.valueOf(b.get(key)));
+                Log.i(tag, methodName + " Value: " + (b.get(key) == null ? "null" : String.valueOf(b.get(key))));
             }
 	}
 	}
